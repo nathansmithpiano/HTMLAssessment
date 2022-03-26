@@ -2,11 +2,35 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>HTMLAssessment Title</title>
+    <title>HTMLAssessment Nathan Smith SD32</title>
   </head>
+  <style>
+  body {
+    width: 500px;
+  }
+    table {
+      text-align: center;
+      padding: 0px;
+      width: 100%;
+    }
+    form {
+      width: 100%;
+    }
+    caption {
+      font-size: 36px;
+    }
+    th {
+      font-size:18px;
+    }
+    tr:nth-child(odd) {
+      background-color: #EBECF0;
+    }
+  </style>
   <body>
+
+    <!-- BEGIN TEXT --->
     <section>
-      <h3>TEXT</h3>
+      <h1>TEXT</h1>
       <p><strong>Lorem</strong> ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna at est hendrerit fringilla. Phasellus vehicula pretium justo quis tempor. Pellentesque pretium sollicitudin vehicula. Nulla viverra eleifend mi, ut aliquam tellus iaculis in. Aenean mi dui, tristique sed magna et, vehicula tincidunt neque. Donec dapibus nec nibh dictum viverra. Fusce eleifend venenatis lorem, quis ornare dolor laoreet et. Donec vestibulum, est nec porta iaculis, augue libero faucibus est, rhoncus congue purus augue sed nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque iaculis et magna id placerat. Maecenas dignissim, mauris et aliquet blandit, ligula orci imperdiet arcu, ut tincidunt leo dui et lorem. Maecenas cursus tellus et massa aliquet rutrum. In sed aliquam quam.
       </p>
       <p>
@@ -18,46 +42,71 @@
       </p>
       <p><strong>Maecenas</strong> consectetur egestas sem ut hendrerit. Donec dignissim leo ac libero consequat faucibus. Proin commodo massa at ex auctor mollis. Praesent eget ex sed lorem iaculis vestibulum. Morbi pharetra vestibulum arcu id ultrices. Aenean pulvinar orci mollis, imperdiet tellus facilisis, consequat sapien. Etiam laoreet lectus nisl, in malesuada orci venenatis id. Ut eget leo at nisl cursus tempus sed non neque. Nulla odio erat, laoreet sed euismod in, lobortis non nisl. Morbi nec vestibulum elit. Sed suscipit ligula quis quam faucibus sagittis. Phasellus quis sollicitudin urna.</p>
     </section>
+
+    <!-- BEGIN TABLE --->
     <section>
-      <h3>TABLE</h3>
+      <h1>TABLE</h1>
       <table>
-        <tr>
-          <th colspan=6">SUPER BOWL LVI</th>
-        <tr>
-          <th rowspan="2">Team Name</th>
-          <th colspan="2">First Half</th>
-          <th colspan="2">Second Half</th>
-        </tr>
-        <tr>
-          <td>Q1</td>
-          <td>Q2</td>
-          <td>Q3</td>
-          <td>Q4</td>
-          <td>WINNER</td>
-        </tr>
+        <caption>SUPER BOWL LVI</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Team Name</th>
+            <th colspan="2">First Half</th>
+            <th colspan="2">Second Half</th>
+            <th rowspan="2" style="vertical-align:bottom">Final</th>
+            <th rowspan="2"></th>
+          </tr>
+          <tr>
+            <td>Q1</td>
+            <td>Q2</td>
+            <td>Q3</td>
+            <td>Q4</td>
+          </tr>
+        </thead>
         <tr>
           <td>Los Angeles Rams</td>
           <td>7</td>
           <td>6</td>
           <td>7</td>
           <td>3</td>
-          <td rowspan="2">RAMS</td>
+          <td>23</td>
+          <th rowspan="2" style="vertical-align:bottom; text-align:center">WINNER</th>
         </tr>
         <tr>
           <td>Cincinnati Bengals</td>
           <td>3</td>
-          <td>10</td>
-          <td>16</td>
+          <td>7</td>
+          <td>6</td>
+          <td>4</td>
           <td>20</td>
         </tr>
+        <tfoot>
+          <tr>
+            <th>Total</th>
+            <th>10</th>
+            <th>13</th>
+            <th>13</th>
+            <th>7</th>
+            <th>43</th>
+            <th rowspan="2">RAMS</th>
+          </tr>
+        </tfoot>
       </table>
     </section>
+
+    <!-- BEGIN LIST --->
     <section>
+      <h1>LIST</h1>
       <h3>SUPER BOWL LVI - FINAL STATUS</h3>
       <h4><a href="https://bleacherreport.com/articles/2953476-super-bowl-2022-quarter-by-quarter-score-and-final-stats-for-rams-vs-bengals">Link to source</a></h6>
       <ul>
         <!-- begin team --->
-        <li><a href="https://www.therams.com/">Los Angeles Rams</a>
+        <li>
+          <a href="https://www.therams.com/">
+            <img src="https://i.ibb.co/rM3WSDw/rams-logo.png" alt="bengals-logo" width="10%">
+            <br>
+            Los Angeles Rams
+          </a>
           <ul>
             <li>QB Joe Burrow
               <ul>
@@ -107,7 +156,12 @@
           </ul>
         </li> <!-- end team --->
         <!-- begin team --->
-        <li><a href="https://www.bengals.com/">Cincinnati Bengals</a>
+        <li>
+          <a href="https://www.bengals.com/">
+            <img src="https://i.ibb.co/h1MF128/bengals-logo.png" alt="bengals-logo" width="10%">
+            <br>
+            Cincinnati bengals
+          </a>
           <ul>
             <li>QB Matthew Stafford
               <ul>
@@ -163,21 +217,48 @@
         </li> <!-- end team --->
       </ul>
     </section>
+
+    <!-- BEGIN FORM --->
     <section>
-      <h3>FORM</h3>
+      <form action="assessment.html" method="post">
+        <h1>FORM</h1>
+        <label for="fname">First:</label>
+        <input type="text" id="fname" name="fname">
+        <label for="lname">Last:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <label for="favs">Favorite Sport:</label>
+        <br>
+        <select name="favs" id="favs">
+          <option value="Football">Football</option>
+          <option value="Soccer">Soccer</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Tennis">Tennis</option>
+          <option value="Hockey">Hockey</option>
+          <option value="Underwater basket weaving">Underwater basket weaving</option>
+        </select>
+        <br>
+        <label for="attended"> I have:</label>
+        <input type="checkbox" id="attended" name="attended" value="Attended">
+        <label for="attended">Attended</label>
+        <input type="checkbox" id="played" name="vehicle2" value="Played">
+        <label for="played">Played</label>
+        <input type="checkbox" id="coached" name="coached" value="Coached">
+        <label for="coached">Coached</label>
+        <input type="checkbox" id="bet" name="bet" value="Bet on this sport">
+        <label for="bet">Bet on this sport</label>
+        <br>
+        <label for="leaguepref"> For this sport I prefer the:</label>
+        <input type="radio" id="amateur" name="leaguepref" value="Amateur">
+        <label for="amateur">Amateur</label>
+        <input type="radio" id="college" name="leaguepref" value="College">
+        <label for="college">College</label>
+        <input type="radio" id="professional" name="leaguepref" value="Professional">
+        <label for="professional">Professional</label>
+        <br>
+        <input type="submit" value="Submit Query">
+      </form>
     </section>
-
-    <!--
-      Modify the team names above so they are links to the team home pages. (Be sure to test your links.)
-
-      Locate logos for each team (Wikipedia is a good source) and use the URLs to place each element next to the team name in the list above. Use width and/or height attributes to size it to thumbnail size.
-
-      Add a new section with the heading "FORM". Under it create a form element. Inside of the form add:
-
-      Give the form input text fields for firstname and lastname.
-      Add a drop-down options list that allows the user to select their favorite sport from a predefined list.
-      Add checkboxes indicating whether they have ever personally played/attended/coached/bet on this sport.
-      Add a radio button group indicating whether they prefer the amateur, college, or professional version.
-      Add a submit button.
-      Use br tags for basic formatting.-->
+    <br><br><br>
+  </body>
 </html>
