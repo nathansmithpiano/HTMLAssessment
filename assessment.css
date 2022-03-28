@@ -16,3 +16,8 @@ table {
 ul, ol {
   list-style: square;
 }
+
+a:hover {
+  color: turquoise;
+  text-decoration: none;
+}
