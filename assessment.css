@@ -42,3 +42,7 @@ blockquote {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+form > ul {
+  list-style-type: none;
+}
