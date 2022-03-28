@@ -46,3 +46,7 @@ blockquote {
 form > ul {
   list-style-type: none;
 }
+
+#teamRoster ol :first-child {
+  font-weight: bold;
+}
