@@ -35,22 +35,78 @@ blockquote {
   color: white;
 }
 
-#teamRoster img {
-  visibility: hidden;
+#teamRoster {
+  position: relative;
 }
 
-#teamRoster > :first-child {
+#teamRoster > li img {
+  display: none;
+  /* visibility: hidden; */
+}
+
+/* #teamRoster > li:first-child::after {
+  content: "";
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/4/44/Denver_Broncos_logo.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}*/
+
+/* #teamRoster > :last-child::after {
+  content: "";
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Chicago_Bears_logo.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+} */
+
+#teamRoster > li:first-child::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  opacity: 0.1;
   background-image: url("https://upload.wikimedia.org/wikipedia/en/4/44/Denver_Broncos_logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  /* how do I make this one body? */
+  z-index: -1;
 }
 
-#teamRoster > :last-child {
+
+
+#teamRoster > li:last-child::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  opacity: 0.1;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Chicago_Bears_logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  z-index: -1;
 }
+
+#teamRoster > li:first-child {
+  position: relative;
+}
+
+#teamRoster > li:first-child {
+  position: relative;
+}
+
+
 
 form > ul {
   list-style-type: none;
