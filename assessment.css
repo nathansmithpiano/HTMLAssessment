@@ -21,3 +21,8 @@ a:hover {
   color: turquoise;
   text-decoration: none;
 }
+
+blockquote {
+  background-color: darkgrey;
+  color: white;
+}
